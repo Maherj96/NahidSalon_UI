@@ -408,7 +408,7 @@ function App() {
       <div class="fade-inNav">
       <nav class=" navbar navbar-expand-lg navbar-light mt-5 ms-5">
       <a Style="font-size: 40px;" class=" navbar-brand text-dark" href="#">Nahid's Hair Services</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler border transparent" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     </nav>
@@ -445,9 +445,9 @@ function App() {
       <div className='row'>
       <div className='col-6'>
 
-      <div class=" m-4 p-5  bg-transparent "  Style="height: 450px;" >
+      <div class=" m-4 p-5  bg-transparent overflow-auto "  Style="height: 450px;" >
         <h3>Welcome to Nahid's Hair Services!</h3>
-          <p className='text-dark p-1'>
+          <p className='text-dark '>
 
 Are you seeking a hair stylist who understands the unique needs and desires of each client? Look no further! I'm Nahid, and I'm passionate about helping you look and feel your absolute best.
 
@@ -475,7 +475,7 @@ Join me at Nahid's Hair Services and let's embark on a journey to discover your 
 
     <div id ="services" Style="display:none
                                     " >
-    <div class="fade-in float-center">
+    <div class="fade-in float-center ">
         <div className='row p-2'>
         <div class="card border-dark m-3 p-3 bg-transparent " Style="width: 90rem;height: 20rem;">
           <div className='row h-100'>
