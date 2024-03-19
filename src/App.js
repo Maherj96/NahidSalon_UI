@@ -4,6 +4,11 @@ import './App.css';
 import Fade from 'react-bootstrap/Fade';
 import { useState } from 'react';
 import { Container } from 'react-bootstrap';
+import homeImage from './Home.png';
+import homeLogo from './Logo.png';
+import photo1 from './Photo1.png';
+import photo2 from './Photo2.png';
+import photo3 from './Photo3.png';
 
 
 
@@ -400,18 +405,17 @@ function App() {
 
  
   return (
-    <div  className="App">
-            <button class="btn btn-transparent border-dark float-end btn-lg me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-</svg></button>
+    <div  className="App h-100">
+            
 
       <div class="fade-inNav">
-      <nav class=" navbar navbar-expand-lg navbar-light mt-5 ms-5">
-      <a Style="font-size: 40px;" class=" navbar-brand text-dark" href="#">Nahid's Hair Services</a>
-      <button class="navbar-toggler border transparent" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <nav class=" navbar navbar-expand-auto navbar-light w-100">
+      <img  class="w-50 ms-4"src = {homeLogo}/> 
+      <button class="btn btn-transparent border-dark float-end btn-lg me-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+</svg></button>
     </nav>
+    
     
     </div>
     
@@ -428,9 +432,8 @@ function App() {
 
   <h2 class="mb-3" data-bs-dismiss="offcanvas"  onClick={()=>showServices()}>Services</h2>
 
-  <h2 class="mb-3" data-bs-dismiss="offcanvas"  onClick={()=>showBookAppointment()}>Book Appointment</h2>
+  <h2 class="mb-3" data-bs-dismiss="offcanvas"  onClick={()=>{window.location.href= "https://beautyservices.ulta.com/login"}}>Book Appointment</h2>
 
-  <h2 class="mb-3" data-bs-dismiss="offcanvas"  onClick={()=>showGallary()}>Location</h2>
 
   
   <h2 class="mb-3" data-bs-dismiss="offcanvas"  onClick={()=>showGallary()}>Gallary</h2>
@@ -442,12 +445,16 @@ function App() {
     
     <div id ="home" >
       <div class="fade-in">
+      <div class="container w-100">
+      <img src = {homeImage} className='w-100 h-100'/> 
+  
+</div>
       <div className='row'>
-      <div className='col-6'>
+      <div className="card bg-dark text-light" Style="opacity:0.8;">
 
-      <div class=" m-4 p-5  bg-transparent overflow-auto "  Style="height: 450px;" >
+      <div class=" p-5  bg-transparent overflow-auto "  Style="height: 450px;" >
         <h3>Welcome to Nahid's Hair Services!</h3>
-          <p className='text-dark '>
+          <p className='text-light '>
 
 Are you seeking a hair stylist who understands the unique needs and desires of each client? Look no further! I'm Nahid, and I'm passionate about helping you look and feel your absolute best.
 
@@ -462,10 +469,7 @@ Join me at Nahid's Hair Services and let's embark on a journey to discover your 
          </div>
        
     </div>
-    <div class="container w-50 mb-5">
-      <img src = "https://static01.nyt.com/images/2023/03/28/fashion/28hair-promo-new/28hair-promo-new-videoSixteenByNine3000.jpg" className='w-100 h-100'/>
-  
-</div>
+   
        
       </div>
       </div>
@@ -476,149 +480,368 @@ Join me at Nahid's Hair Services and let's embark on a journey to discover your 
     <div id ="services" Style="display:none
                                     " >
     <div class="fade-in float-center ">
-        <div className='row p-2'>
-        <div class="card border-dark m-3 p-3 bg-transparent " Style="width: 90rem;height: 20rem;">
-          <div className='row h-100'>
-          <div className='col-auto'>
-          <img Style="background-color: rgba(255, 255, 255, .3);height:280px; width:340px" class="card-img-top" src="https://peteandpedro.com/cdn/shop/articles/0_Featured_Haircuts_For_Men_1024x1024.jpg?v=1668875982" alt="Card image cap"/>
-
-          </div>
-          <div className='col-lg'>
-            <h3>Men's Haircut</h3>
-            <p className='mt-5'>Our men's haircut service at Nahid's Hair Services offers precision cuts tailored to your unique style and preferences. Whether you're looking for a classic, timeless look or a modern, edgy style, our experienced stylists are here to deliver. With attention to detail and expertise in the latest techniques, we ensure a clean, polished finish every time. Trust us to enhance your appearance and leave you feeling confident and refreshed. Schedule your appointment today and step into a world of personalized grooming excellence.</p>
-            <button  class="btn btn-outline-dark mt-5"  onClick={()=>showBookAppointment()} Style="background-outline:black">Go to Book Appointments <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-</svg></button>
-
-          </div>
-
-        </div>
-        </div>
-        <div class="card border-dark m-3 p-3 bg-transparent " Style="width: 90rem;height: 20rem;">
-          <div className='row h-100'>
-          <div className='col-auto'>
-          <img Style="background-color: rgba(255, 255, 255, .3);height:280px; width:340px" class="card-img-top" src="https://dapperanddivinestudio.com/wp-content/uploads/2019/02/women%E2%80%99s-haircut-2.jpg" alt="Card image cap"/>
-
-          </div>
-          <div className='col-lg'>
-            <h3>Woman's Haircut</h3>
-            <p className='mt-5'>Discover the perfect blend of style and sophistication at Nahid's Hair Services. Our women's haircut service offers tailored cuts designed to enhance your natural beauty and individuality. From chic bobs to flowing layers, our skilled stylists will create a look that complements your unique features and lifestyle. Step into our salon and let us transform your hair into a stunning expression of your personality. Book your appointment today and experience the ultimate in personalized hair care.</p>
-            <button class="btn btn-outline-dark mt-5"  onClick={()=>showBookAppointment()} Style="background-outline:black">Go to Book Appointments <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-</svg></button>
-
-          </div>
-
-          </div>
-        </div>
-        <div class="card border-dark m-3 p-3 bg-transparent " Style="width: 90rem;height: 20rem;">
-          <div className='row h-100'>
-          <div className='col-auto'>
-          <img Style="background-color: rgba(255, 255, 255, .3);height:280px; width:340px" class="card-img-top" src="https://thevipbarber.com/wp-content/uploads/2021/09/8-curso.de_.barbeiro_95127759_371497253766755_7161981912719788012_n-680x680-1.jpg" alt="Card image cap"/>
-
-          </div>
-          <div className='col-lg'>
-            <h3>Kid's Haircut</h3>
-            <p className='mt-5'>At Nahid's Hair Services, we make haircuts fun and easy for your little ones! Our kids' haircut service offers a playful and friendly environment where children can feel comfortable and relaxed. Whether it's their first haircut or a regular trim, our experienced stylists will work patiently to create a style that suits their personality and preferences. With gentle care and attention to detail, we'll leave your child looking and feeling their best. Bring your little ones to Nahid's Hair Services for a hassle-free haircut experience they'll love. Schedule their appointment today and let the smiles begin!</p>
-            <button class="btn btn-outline-dark mt-5"  onClick={()=>showBookAppointment()} Style="background-outline:black">Go to Book Appointments <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-</svg></button>
-
-          </div>
-
-          </div>
-        </div>
-        <div class="card border-dark m-3 p-3 bg-transparent " Style="width: 90rem;height: 20rem;">
-          <div className='row h-100'>
-          <div className='col-auto'>
-          <img Style="background-color: rgba(255, 255, 255, .3);height:280px; width:340px" class="card-img-top" src="https://www.realsimple.com/thmb/No6PG-h8Or4qaeAUHqmxym6mgNU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/highlights-every-hair-color-2000-3ef162fac0234161a184c0d370717914.jpg" alt="Card image cap"/>
-
-          </div>
-          <div className='col-lg'>
-            <h3>Highlight</h3>
-            <p className='mt-5'>Elevate your look with gorgeous highlights at Nahid's Hair Services. Our highlight service offers a touch of brightness and dimension to your hair, enhancing your natural beauty and adding depth to your style. Whether you prefer subtle sun-kissed strands or bold, statement-making highlights, our expert stylists will create a customized look that complements your skin tone and personal aesthetic. Using the latest techniques and premium products, we'll ensure seamless blending and stunning results every time. Revitalize your hair and ignite your confidence with highlights from Nahid's Hair Services. Schedule your appointment today and shine brighter than ever before!</p>
-            <button class="btn btn-outline-dark mt-3"  onClick={()=>showBookAppointment()} Style="background-outline:black">Go to Book Appointments <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-</svg></button>
-
-          </div>
-
-          </div>
-        </div>
-        
-        <div class="card border-dark m-3 p-3 bg-transparent " Style="width: 90rem;height: 20rem;">
-          <div className='row h-100'>
-          <div className='col-auto'>
-          <img Style="background-color: rgba(255, 255, 255, .3);height:280px; width:340px" class="card-img-top" src="https://cdn-bjfha.nitrocdn.com/EzcQtwiBVoAQjOfXvaaHKtwTZOGljkZF/assets/static/optimized/wp-content/uploads/2021/08/89c37f8f223efc1a70cc9fba29b9824e.shutterstock_1935834610.jpg" alt="Card image cap"/>
-
-          </div>
-          <div className='col-lg'>
-            <h3>Perm</h3>
-            <p className='mt-5'>Transform your hair with beautiful curls and waves at Nahid's Hair Services. Our perm service offers a convenient and long-lasting solution for adding volume and texture to your locks. Whether you desire loose, beachy waves or tight, defined curls, our skilled stylists will customize the perfect perm to suit your unique style and preferences. With top-quality products and precise techniques, we'll create a stunning, low-maintenance look that lasts. Say goodbye to flat, lifeless hair and hello to effortless beauty with a perm from Nahid's Hair Services. Book your appointment today and embrace your gorgeous new hairstyle!</p>
-            <button class="btn btn-outline-dark mt-3"  onClick={()=>showBookAppointment()} Style="background-outline:black">Go to Book Appointments <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-</svg></button>
-
-          </div>
-
-          </div>
-        </div>
-        <div class="card border-dark m-3 p-3 bg-transparent " Style="width: 90rem;height: 20rem;">
-          <div className='row h-100'>
-          <div className='col-auto'>
-          <img Style="background-color: rgba(255, 255, 255, .3);height:280px; width:340px" class="card-img-top" src="https://tenajsaloninstitute.edu/wp-content/uploads/2020/12/Beauty-Fashion-Model-Girl-with.jpg" alt="Card image cap"/>
-
-          </div>
-          <div className='col-lg'>
-            <h3>Coloring</h3>
-            <p className='mt-5'>Transform your hair with vibrant color at Nahid's Hair Services. Our coloring service offers endless possibilities for expressing your unique style and personality. Whether you're craving a bold new hue, subtle highlights, or a sophisticated balayage, our skilled colorists will work with you to create a customized look that complements your skin tone and features. Using only the highest quality hair color products, we'll ensure stunning, long-lasting results with minimal damage to your hair. From rich brunettes to vibrant blondes and everything in between, trust Nahid's Hair Services to bring your hair color dreams to life. Schedule your appointment today and let your true colors shine!</p>
-            <button class="btn btn-outline-dark mt-3"  onClick={()=>showBookAppointment()} Style="background-outline:black">Go to Book Appointments <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-</svg></button>
-
-          </div>
-
-          </div>
-        </div>
-        <div class="card border-dark m-3 p-3 bg-transparent " Style="width: 90rem;height: 20rem;">
-          <div className='row h-100'>
-          <div className='col-auto'>
-          <img Style="background-color: rgba(255, 255, 255, .3);height:280px; width:340px" class="card-img-top" src="https://media1.popsugar-assets.com/files/thumbor/zfpCJRqxiUPbvGnUuh2hkquIpcw=/519x651:3117x3249/fit-in/792x1188/filters:format_auto():upscale()/2023/04/07/798/n/1922153/452debc764305c96457cf4.35427848_.jpg" alt="Card image cap"/>
-
-          </div>
-          <div className='col-lg'>
-            <h3>Formal</h3>
-            <p className='mt-5'>Elevate your look for any special occasion with formal hairstyling at Nahid's Hair Services. Whether you're attending a wedding, prom, or gala event, our skilled stylists will create an elegant and sophisticated hairstyle that perfectly complements your outfit and showcases your natural beauty. From timeless updos to glamorous curls and sleek chignons, we'll work with you to design a customized look that makes you feel confident and glamorous. With attention to detail and precision styling techniques, we'll ensure your hair stays flawless throughout the entire event. Trust Nahid's Hair Services to create the perfect formal hairstyle for your unforgettable moments. Schedule your appointment today and step into the spotlight with confidence!</p>
-            <button class="btn btn-outline-dark mt-3"  onClick={()=>showBookAppointment()} Style="background-outline:black">Go to Book Appointments <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-</svg></button>
-
-          </div>
-
-          </div>
-        </div>
-        <div class="card border-dark m-3 p-3 bg-transparent " Style="width: 90rem;height: 20rem;">
-          <div className='row h-100'>
-          <div className='col-auto'>
-          <img Style="background-color: rgba(255, 255, 255, .3);height:280px; width:340px" class="card-img-top" src="https://cdn.shopify.com/s/files/1/0053/7929/3230/files/IMG_5282_600x600.jpg?v=1633515502" alt="Card image cap"/>
-
-          </div>
-          <div className='col-lg'>
-            <h3>Silk Press</h3>
-            <p className='mt-5'>Experience the ultimate in sleek and smooth hair with a silk press at Nahid's Hair Services. Our silk press service offers a luxurious and long-lasting straightening treatment that leaves your hair looking and feeling silky soft. Using professional-grade tools and techniques, our skilled stylists will transform your natural texture into a sleek and glossy finish without the use of harsh chemicals. Say goodbye to frizz and hello to effortlessly beautiful hair that moves with grace and ease. Treat yourself to the luxury of a silk press at Nahid's Hair Services and unlock your hair's true potential. Schedule your appointment today for hair that shines with radiance!</p>
-            <button class="btn btn-outline-dark mt-3"  onClick={()=>showBookAppointment()} Style="background-outline:black">Go to Book Appointments <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-</svg></button>
-
-          </div>
-
-          </div>
-        </div>
-        </div>
-      
-        </div>
+    <div class="accordion m-3"  id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      Haircut
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      <div class="container">
+  <div class="row">
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="w-100"></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="w-100"></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+  </div>
+</div>
+      </div>
     </div>
-    <div id ="Gallary" class="border-dark"  Style="display:none" >
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+      Hair Color
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      <div class="container">
+  <div class="row">
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="w-100"></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="w-100"></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+      Hair Styling
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      <div class="container">
+  <div class="row">
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="w-100"></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="w-100"></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+      Hair Treatments
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      <div class="container">
+  <div class="row">
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="w-100"></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="w-100"></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFive">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+        Curls
+      </button>
+    </h2>
+    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      <div class="container">
+  <div class="row">
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="w-100"></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="w-100"></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+    <div class="col p-2"><div class="card" Style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+        </div>
+        </div>
+    <div id ="Gallary" class="h-100"  Style="display:none" >
       <div class="fade-in">
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
   <div class="carousel-indicators">
@@ -628,26 +851,17 @@ Join me at Nahid's Hair Services and let's embark on a journey to discover your 
   </div>
   <div class="container d-flex align-items-center justify-content-center w-50">
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://divadivinehair.com/cdn/shop/articles/033d7950b7f95a3b91f06e8760dbf101.jpg?v=1608471197&width=2048" class="d-block h-75" alt="..."/>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
+  <div class="carousel-item active">
+      <img src={photo1} class="d-block w-75" alt="..."/>
+      
     </div>
     <div class="carousel-item">
-      <img src="https://divadivinehair.com/cdn/shop/articles/033d7950b7f95a3b91f06e8760dbf101.jpg?v=1608471197&width=2048" class="d-block w-75" alt="..."/>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
+      <img src={photo2} class="d-block w-75" alt="..."/>
+      
     </div>
     <div class="carousel-item">
-      <img src="https://divadivinehair.com/cdn/shop/articles/033d7950b7f95a3b91f06e8760dbf101.jpg?v=1608471197&width=2048" class="d-block w-75" alt="..."/>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
+      <img src={photo3} class="d-block w-75" alt="..."/>
+      
     </div>
   </div>
   </div>

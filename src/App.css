@@ -13,6 +13,14 @@
   }
 }
 
+.accordion {
+	--bs-accordion-btn-color: ghostwhite;
+	--bs-accordion-btn-bg: rgb(45, 43, 44);
+	--bs-accordion-active-color: rgb(234, 141, 83);
+	--bs-accordion-active-bg: rgb(45, 43, 44);
+}
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
