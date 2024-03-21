@@ -9,6 +9,11 @@ import homeLogo from './Logo.png';
 import photo1 from './Photo1.png';
 import photo2 from './Photo2.png';
 import photo3 from './Photo3.png';
+import photo4 from './Photo4.png';
+import photo5 from './Photo5.png';
+import photo6 from './Photo6.png';
+import photo7 from './Photo7.png';
+
 
 
 
@@ -409,9 +414,11 @@ function App() {
       <div class="fade-inNav">
       <nav class="navbar navbar-expand-lg navbar-light bg-transparent ">
         
-  <a class="navbar-brand" href="#"><img  class="w-75"src = {homeLogo}/> </a>
+  <img Style="outline-color:#f5d090;
+	
+	animation: pulse 2s infinite;" class="w-50"src = {homeLogo}/> 
   <div class = "col-sm"></div>
-  <button class="btn btn-transparent border-dark float-end btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  <button class="btn btn-transparent border-dark float-end me-5 btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
 </svg></button>
 
@@ -426,7 +433,7 @@ function App() {
     <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
     <h1 class="offcanvas-title" id="offcanvasRightLabel">Menu</h1>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" class="btn-close btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
   
@@ -452,10 +459,10 @@ function App() {
       <img src = {homeImage} className='w-100 h-100'/> 
   
 </div>
-      <div className='row'>
-      <div className="card bg-dark text-light" Style="opacity:0.8;">
+<div class="border border-dark border-4 m-4 p-2">
+      <div className="card rounded m-4 p-3 bg-dark text-light" >
 
-      <div class=" p-5  bg-transparent overflow-auto "  Style="height: 450px;" >
+      <div class=" p-5  bg-dark overflow-auto "  Style="height: 450px;" >
         <h3>Welcome to Nahid's Hair Services!</h3>
           <p className='text-light '>
 
@@ -472,9 +479,10 @@ Join me at Nahid's Hair Services and let's embark on a journey to discover your 
          </div>
        
     </div>
+    </div>
    
        
-      </div>
+      
       </div>
       
 </div>
@@ -482,6 +490,8 @@ Join me at Nahid's Hair Services and let's embark on a journey to discover your 
 
     <div id ="services" Style="display:none
                                     " >
+        <div class="border border-dark border-4 m-4 p-2">
+
     <div class="fade-in float-center ">
     <div class="accordion m-3"  id="accordionExample">
   <div class="accordion-item">
@@ -708,13 +718,7 @@ Join me at Nahid's Hair Services and let's embark on a journey to discover your 
     
   </div>
 </div></div>
-    <div class="col p-2"><div class="card bg-transparent border border-dark" Style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
     
-  </div>
-</div></div>
    
   </div>
 </div>
@@ -748,38 +752,67 @@ Join me at Nahid's Hair Services and let's embark on a journey to discover your 
 </div>
         </div>
         </div>
+        </div>
     <div id ="Gallary" class="h-100"  Style="display:none" >
       <div class="fade-in">
+      
+
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-  <div class="carousel-indicators">
+ 
+  
+  <div class="container  w-50">
+  <div class="border border-dark border-4 m-4 p-3 d-flex align-items-center justify-content-center">
+
+  <div class="carousel-inner">
+  <div class="carousel-item active">
+      <img src={photo1} class="d-block w-100 grow" alt="..."/>
+      
+    </div>
+    <div class="carousel-item">
+      <img src={photo2} class="d-block w-100 grow" alt="..."/>
+      
+    </div>
+    <div class="carousel-item">
+      <img src={photo3} class="d-block w-100 grow" alt="..."/>
+      
+    </div>
+    <div class="carousel-item">
+      <img src={photo4} class="d-block w-100 grow" alt="..."/>
+      
+    </div>
+    <div class="carousel-item">
+      <img src={photo5} class="d-block w-100 grow" alt="..."/>
+      
+    </div>
+    <div class="carousel-item">
+      <img src={photo6} class="d-block w-100 grow" alt="..."/>
+      
+    </div>
+    <div class="carousel-item">
+      <img src={photo7} class="d-block w-100 grow" alt="..."/>
+      
+    </div>
+    
+  </div>
+  </div>
+  <div class="carousel-indicators mt-5">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="container d-flex align-items-center justify-content-center w-50">
-  <div class="carousel-inner">
-  <div class="carousel-item active">
-      <img src={photo1} class="d-block w-75" alt="..."/>
-      
-    </div>
-    <div class="carousel-item">
-      <img src={photo2} class="d-block w-75" alt="..."/>
-      
-    </div>
-    <div class="carousel-item">
-      <img src={photo3} class="d-block w-75" alt="..."/>
-      
-    </div>
-  </div>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="carousel-control-prev-icon"  aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
   <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+</div>
 </div>
 </div>
       
@@ -1023,9 +1056,10 @@ Join me at Nahid's Hair Services and let's embark on a journey to discover your 
 
 
     
-    <hr Style="margin: auto;" className='w-75 border border-dark mt-5 mb-2' ></hr>
+    <hr Style="margin: auto;" className='w-75 border border-dark  mt-5 mb-2' ></hr>
   
     <div class = "fade-inNav">
+    
     <div className='text-center'>
       
     <button onClick={()=>{window.location.href="mailto:suraiyanahid74@icloud.com"}}  type="button" class="btn btn-outline-dark rounded-circle m-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
@@ -1041,10 +1075,15 @@ Join me at Nahid's Hair Services and let's embark on a journey to discover your 
   <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
 </svg></button>
     </div>
+    <div class="border border-dark border-4 m-4 p-2">
+    <div class="card bg-dark text-light m-3 rounded" >
+
     <h6 className='mt-3'> Phone number: 770-912-1009</h6>
     <h6> Address: 2059 Scenic Hwy N Suite 107, Snellville, GA 30078 Inside Ulta</h6>
     
     <p> Created by Maher Jahan</p>
+    </div>
+    </div>
     </div>
     </div>
   );

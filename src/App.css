@@ -20,6 +20,23 @@
 	--bs-accordion-active-bg: rgb(45, 43, 44);
 }
 
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		
+	}
+
+	70% {
+		transform: scale(1.1);
+    
+		
+	}
+
+	100% {
+		transform: scale(0.95);
+		
+	}
+}
 
 .App-header {
   background-color: #282c34;
@@ -37,6 +54,14 @@
   
   margin: 0 auto;
 }
+
+.grow { 
+  transition: all .2s ease-in-out; 
+  }
+  
+  .grow:hover { 
+  transform: scale(1.1); 
+  }
 
 .zoom:hover {
   transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
